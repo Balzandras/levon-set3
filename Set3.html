@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+      
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center items horizontally */
+            margin: 20px 0;
+        }
+        .question-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 20px;
+            width: 80%;
+            max-width: 600px;
+            margin: 15px; /* Space between containers */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        input, select {
+            padding: 10px;
+            margin: 10px 0;
+            width: calc(100% - 20px);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #4cae4c;
+        }
+        p {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>SET 3</h1>
+
+    <div class="container">
+        <!-- ROTATE THE ARRAY -->
+        <div class="question-container">
+            <h1>Input Array Rotation</h1>
+            <label for="arrayInput">Enter an array of numbers (comma-separated):</label>
+            <input type="text" id="arrayInput" placeholder="e.g., 1, 2, 3, 4, 5, 6, 7">
+    
+            <label for="rotationInput">Enter rotation count (k):</label>
+            <input type="number" id="rotationInput" placeholder="e.g., 3">
+    
+            <button onclick="performRotation()">Rotate Array</button>
+            <h3 id="output1"></h3>
+        </div>
+
+        <!-- MAXIMUM ELEMENT -->
+        <div class="question-container">
+            <h1>Find the Maximum Element</h1>
+            <label for="arrayInputMax">Enter an array of numbers (comma-separated):</label>
+            <input type="text" id="arrayInputMax" placeholder="e.g., 10, 25, 47, 5, 99">
+    
+            <button onclick="displayMax()">Find Maximum</button>
+            <p id="output2"></p>
+        </div>
+
+        <!-- LOGIN BASED CALCULATOR -->
+        <div class="question-container">
+            <h1>Login Based Calculator - Choose the Operator</h1>
+            <div id="signup-section">
+                <h3>Signup for Calculator</h3>
+                <label>Name</label>
+                <input type="text" id="name" placeholder="Enter your name">
+                <label>Email</label>
+                <input type="email" id="email" placeholder="Enter your email">
+                <label>Password</label>
+                <input type="password" id="password" placeholder="Enter your password">
+                <label>Choose Operator</label>
+                <select id="operator">
+                    <option value="+">Addition</option>
+                    <option value="-">Subtraction</option>
+                    <option value="*">Multiplication</option>
+                </select>
+                <button onclick="registerUser()">Submit</button>
+            </div>
+
+            <div id="calculator-section" style="display:none;">
+                <h3>Welcome, <span id="userName"></span></h3>
+                <h4>You have registered for the <span id="chosenOperator"></span></h4>
+                <label>Input 1</label>
+                <input type="number" id="input1">
+                <label>Input 2</label>
+                <input type="number" id="input2">
+                <label>Output</label>
+                <input type="text" id="output3" readonly>
+                <button onclick="calculate()">Calculate</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./Set3.js"></script>
+</body>
+</html>
